@@ -9,6 +9,10 @@ public class fila {
     private mesa Mesa;
     Boolean mesaEspera;
 
+    public void Fila_de_Espera(){
+
+    }
+
     public void adicionarCliente(String Cliente, Date Espera) {
 
     }

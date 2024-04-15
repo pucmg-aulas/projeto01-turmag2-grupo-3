@@ -1,21 +1,35 @@
 package main.Mesa;
 
 public class mesa {
-    int mesa4, mesa6, mesa8;
-
-    public int ocuparMesa(int MesaInsert) {
-
-        return 0;
+    private int mesa4 = 4;
+    private int mesa6 = 4;
+    private int mesa8 = 2;
+    
+    public void Mesa(){
+        
     }
-
-    public int desocuparMesa(int MesaInsert) {
-
-        return 0;
+    
+    public void ocuparMesa(int qt_pessoas){
+        if(qt_pessoas <= 4){
+            this.mesa4 = this.mesa4 - 1;
+        }else if(qt_pessoas > 4 && qt_pessoas <= 6){
+            this.mesa6 = this.mesa6 - 1;
+        }else if(qt_pessoas > 6 && qt_pessoas <= 8){
+            this.mesa8 = this.mesa8 - 1;
+        }
     }
-
-    public Boolean disponibilidade(Boolean verificacao, int mesInsert){
-
-        return true;
+    
+    public void desocuparMesa(int qt_pessoas){
+        if(qt_pessoas <= 4){
+            this.mesa4 = this.mesa4 + 1;
+        }else if(qt_pessoas > 4 && qt_pessoas <= 6){
+            this.mesa6 = this.mesa6 + 1;
+        }else if(qt_pessoas > 6 && qt_pessoas <= 8){
+            this.mesa8 = this.mesa8 + 1;
+        }
     }
-
+    
+    public void disponibilidade(){
+        
+    }
 }
