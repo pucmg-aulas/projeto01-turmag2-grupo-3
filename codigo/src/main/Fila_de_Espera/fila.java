@@ -4,20 +4,20 @@ import main.Clientes.*;
 import main.Mesa.*;
 import java.util.*;
 
-public class fila {
-    private clientes clients;
-    private mesa Mesa;
-    Boolean mesaEspera;
+public class Fila {
+    private Cliente clients;
+    private Mesa Mesa;
+    private Boolean mesaEspera;
 
-    public void Fila_de_Espera(){
-
-    }
-
-    public void adicionarCliente(String Cliente, Date Espera) {
+    public void Fila(){
 
     }
 
-    public void removerCliente(String Cliente, Date entrada) {
+    public void adicionarCliente(Cliente cliente, Date entrada) {
+
+    }
+
+    public void removerCliente(Cliente Cliente, Date saida) {
 
     }
 }
