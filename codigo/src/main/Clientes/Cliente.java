@@ -25,16 +25,6 @@ public class Cliente{
 
     }
 
-    /* 
 
-    public void solicitar_mesa(int qtd_pessoas, String Nome, String Telefone, int id, String st) {
-        this.nome = Nome;
-        this.telefone = Telefone;
-        this.identidade = id;
-        this.quantidade_pessoas = qtd_pessoas;
-        this.status = st;
-    }
-
-    */
 
 }
