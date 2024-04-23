@@ -22,9 +22,9 @@ public class Mesa extends Restaurante {
             this.cadeiras = this.cadeiras - 1;
         }*/
 
-        Date this.dt_entrada = new Date();
-        this.dt_entrada.getTime();
-
+        Date hora = new Date();
+        hora.getTime();
+        this.dt_entrada = hora;
         
         // Adicionar horario de entrada
     }
@@ -39,8 +39,9 @@ public class Mesa extends Restaurante {
         }
     }*/
 
-        Date this.dt_saida = new Date();
-        this.dt_saida.getTime();
+        Date hora = new Date();
+        hora.getTime();
+        this.dt_saida = hora;
 
 
     // Adicionar horario de saida
