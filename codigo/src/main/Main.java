@@ -9,14 +9,14 @@ public class Main {
 
     public static void main(String[] args){
         Restaurante restaurante = new Restaurante();
-        restaurante.AdicionarMesa(new Mesa(4));
-        restaurante.AdicionarMesa(new Mesa(4));
-        restaurante.AdicionarMesa(new Mesa(6));
-        restaurante.AdicionarMesa(new Mesa(6));
-        restaurante.AdicionarMesa(new Mesa(6));
-        restaurante.AdicionarMesa(new Mesa(6));
-        restaurante.AdicionarMesa(new Mesa(8));
-        restaurante.AdicionarMesa(new Mesa(8));
+        restaurante.adicionarMesa(new Mesa(4));
+        restaurante.adicionarMesa(new Mesa(4));
+        restaurante.adicionarMesa(new Mesa(6));
+        restaurante.adicionarMesa(new Mesa(6));
+        restaurante.adicionarMesa(new Mesa(6));
+        restaurante.adicionarMesa(new Mesa(6));
+        restaurante.adicionarMesa(new Mesa(8));
+        restaurante.adicionarMesa(new Mesa(8));
 
         Scanner insert = new Scanner(System.in);
 

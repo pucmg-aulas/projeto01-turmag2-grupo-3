@@ -17,7 +17,7 @@ public class Restaurante {
         listaEspera = new LinkedList<>();
     }
 
-    public void AdicionarMesa(Mesa mesa) {
+    public void adicionarMesa(Mesa mesa) {
         mesas.add(mesa);
         System.out.println("Adicionando mesa: "+ mesa);
     }

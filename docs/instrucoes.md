@@ -1,3 +1,16 @@
 # Instruções de uso
 
-Coloque neste arquivo qualquer instrução que julgar pertinente para a execução correta do sistema: arquivos de configuração, arquivos de dados, possíveis dados de teste etc.
+### Instalar Programas Necessários
+Instale o java em seu computador através desse link e seguir as intruções: 
+https://www.java.com/en/download/help/download_options.html
+
+### Rodar o código
+* Abra seu terminal e digite: 
+
+```cd codigo/src/```
+Assim entrará na pasta source do arquivo
+* Para compilar digite o comando:
+```javac main/Main.java main/Restaurante/Restaurante.java main/Clientes/Cliente.java main/Mesa/Mesa.java```
+
+* Para rodar o código digite:
+```java main.Main```
