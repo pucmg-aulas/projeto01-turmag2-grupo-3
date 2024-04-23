@@ -11,6 +11,8 @@ public class Main {
         Restaurante restaurante = new Restaurante();
         restaurante.adicionarMesa(new Mesa(4));
         restaurante.adicionarMesa(new Mesa(4));
+        restaurante.adicionarMesa(new Mesa(4));
+        restaurante.adicionarMesa(new Mesa(4));
         restaurante.adicionarMesa(new Mesa(6));
         restaurante.adicionarMesa(new Mesa(6));
         restaurante.adicionarMesa(new Mesa(6));
