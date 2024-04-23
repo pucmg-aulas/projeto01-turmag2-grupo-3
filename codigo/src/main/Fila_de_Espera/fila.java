@@ -13,11 +13,11 @@ public class Fila {
 
     }
 
-    public void adicionarCliente(Cliente cliente, Date entrada) {
+    public void adicionarClienteL(Cliente cliente, Date entrada) {
 
     }
 
     public void removerCliente(Cliente Cliente, Date saida) {
-
+        
     }
 }
