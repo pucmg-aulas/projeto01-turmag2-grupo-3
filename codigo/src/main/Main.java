@@ -33,6 +33,10 @@ public class Main {
                     if (qtdClientes <= 0) {
                         System.out.println("Saindo do Sistema");
                         break;
+                    }else if(qtdClientes>=9){
+                        System.out.println("Quatidade não permitida!");
+                    }else{
+                        restaurante.alocarCliente(qtdClientes);
                     }
                     break;
                 case 2:
