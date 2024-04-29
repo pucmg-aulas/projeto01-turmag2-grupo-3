@@ -21,23 +21,28 @@ public class Main {
         restaurante.adicionarMesa(new Mesa(8));
 
         Scanner insert = new Scanner(System.in);
+        int flag=0;
 
-        while (true) {
-            System.out
-                    .println("Sistema do Restaurante, digite <= 0 para quebrar o código e 101 para remover um cliente");
-            int qtdClientes = insert.nextInt();
-            if (qtdClientes <= 0) {
-                System.out.println("Saindo do Sistema");
-                break;
-            } else if (qtdClientes >= 9 && qtdClientes != 101) {
-                System.out.println("Não permitida essa quantidade de clientes no restaurante");
-            } else if (qtdClientes == 101) {
-                restaurante.removerCliente();
-            } else {
-                restaurante.alocarCliente(qtdClientes);
+        while (flag!=1) {
+            System.out.print("Digite 1 para alocar cliente\nDigite 2 para remover cliente\nDigite 3 para sair\n");
+            int choose = insert.nextInt();
+            switch (choose) {
+                case 1:
+                    System.out.println("Digite a quantidade de clientes: ");
+                    int qtdClientes = insert.nextInt();
+                    if (qtdClientes <= 0) {
+                        System.out.println("Saindo do Sistema");
+                        break;
+                    }
+                    break;
+                case 2:
+                    restaurante.removerCliente();
+                    break;
+                case 3:
+                flag=1;
+                    break;
             }
         }
-        insert.close();
     }
 
 }
