@@ -1,5 +1,6 @@
 package main.Restaurante;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -24,10 +25,11 @@ public class Restaurante {
 
     public void alocarCliente(int qtdClientes) {
         Mesa mesa = verificacaoMesa(qtdClientes);
+        LocalDateTime entrada = LocalDateTime.now();
         if (mesa != null) {
             Cliente cliente = new Cliente(qtdClientes);
             mesa.alocarCliente(cliente);
-            System.out.println("Alocando mesa para "+ qtdClientes+ " clientes");
+            System.out.println("Alocando mesa para "+ qtdClientes+ " clientes, entrada: "+ entrada);
         } else {
             Cliente cliente = new Cliente(qtdClientes);
             ClienteEspera(cliente);
@@ -51,8 +53,26 @@ public class Restaurante {
         System.out.println("Cliente alocado para a espera!");
     }
 
-    public void removerCliente(){
-        listaEspera.poll();
-        System.out.println("Cliente removido da lista de espera");
+    public void removerCliente() {
+        for (Mesa mesa : mesas) {
+            if (!mesa.cliente.isEmpty()) {
+                Cliente cliente = mesa.cliente.get(0);
+                mesa.removerMesa(cliente);
+                System.out.println("Cliente removido da mesa.");
+                if (!listaEspera.isEmpty()) {
+                    Cliente proximoCliente = listaEspera.poll();
+                    if (mesa.getCapacidade() >= proximoCliente.getCliente()) {
+                        mesa.alocarCliente(proximoCliente);
+                        System.out.println("Próximo cliente da lista de espera alocado na mesa.");
+                    } else {
+                        listaEspera.add(proximoCliente);
+                        System.out.println("Não há mesas disponíveis para o próximo cliente da lista de espera.");
+                    }
+                }
+                return;
+            }
+        }
+        System.out.println("Não há clientes para remover das mesas.");
     }
+    
 }

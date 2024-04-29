@@ -9,7 +9,7 @@ public class Mesa {
 
     private int capacidade;
     private boolean ocupada;
-    private ArrayList<Cliente> cliente;
+    public ArrayList<Cliente> cliente;
     private LocalDateTime entrada;
     private LocalDateTime saida;
 
@@ -36,6 +36,7 @@ public class Mesa {
     public void removerMesa(Cliente clientes) {
         cliente.remove(clientes);
         saida = LocalDateTime.now();
+        System.out.println("Mesa vazia, horário de saída dos clientes: "+ saida);
         if (cliente.isEmpty()) {
             ocupada = false;
         }
