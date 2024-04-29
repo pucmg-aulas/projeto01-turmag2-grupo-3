@@ -1,5 +1,5 @@
 # Nome do projeto
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+Nosso projeto tem o objetivo de criar um sistema que administra a entrada e saída de clientes de um restaurante, adicionando clientes na fila de espera e os realocando para as mesas, registrando os horários de entrada e saída.
 
 ## Alunos integrantes da equipe
 
