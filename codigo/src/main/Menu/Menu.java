@@ -17,7 +17,7 @@ public class Menu {
     }
 
     public void MostrarCardapio() {
-        System.out.println("Food Store Inventory:");
+        System.out.println("Cardapio:");
         for (Prato prato : MenuItens) {
             System.out.println(prato.getNome() + ": R$" + prato.getPreco());
         }

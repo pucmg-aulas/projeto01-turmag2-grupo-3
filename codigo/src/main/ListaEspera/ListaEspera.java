@@ -22,7 +22,7 @@ public class ListaEspera {
     }
 
     public void MostrarLista() {
-        System.out.println("Food Store Inventory:");
+        System.out.println("Lista de Clientes na fila de espera:");
         for (Cliente cliente : ListaDeEspera) {
             System.out.println(cliente.getNome() + ", quantidade reservada de assentos:" + cliente.getCliente());
         }
