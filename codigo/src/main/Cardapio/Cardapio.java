@@ -18,6 +18,7 @@ public class Cardapio {
         MenuItensPrato.add(prato);
         System.out.println("Prato Adicionado");
     }
+    
     public void AdicionarBebida(Bebida bebida) {
         MenuItensBebida.add(bebida);
         System.out.println("Bebida Adicionado");

@@ -1,7 +1,6 @@
 package main.Requisicao;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 import main.Clientes.Cliente;
 import main.ListaEspera.ListaEspera;
@@ -16,7 +15,7 @@ public class Requisicao {
         Mesa mesa = verificacaoMesa(qtdClientes);
         LocalDateTime entrada = LocalDateTime.now();
         if (mesa != null) {
-            Cliente cliente = new Cliente(nomeCliente, qtdClientes);
+            // Cliente cliente = new Cliente(nomeCliente, qtdClientes);
             // mesa.alocarCliente(cliente);
             System.out.println("Alocando mesa para " + qtdClientes + " clientes, entrada: " + entrada);
         } else {

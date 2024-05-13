@@ -1,10 +1,5 @@
 package main.Mesa;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-
-import main.Clientes.Cliente;
-
 public class Mesa {
 
     private int capacidade;
@@ -25,9 +20,5 @@ public class Mesa {
 
     public int getCapacidade() {
         return capacidade;
-    }
-
-    public void removerMesa(Cliente clientes) {
-
     }
 }
