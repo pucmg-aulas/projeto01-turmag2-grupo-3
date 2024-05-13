@@ -30,6 +30,7 @@ public class Mesa {
     public void alocarCliente(Cliente clientes) {
         cliente.add(clientes);
         entrada = LocalDateTime.now();
+        System.out.println("Horário de entrada dos clientes: "+ entrada);
         ocupada = true;
     }
 
