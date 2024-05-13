@@ -9,7 +9,7 @@ public class Cliente {
         this.Nome = nome;
     }
 
-    public int getCliente() {
+    public int getQtdCliente() {
         return QtdClientes;
     }
     

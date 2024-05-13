@@ -4,17 +4,20 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import main.Clientes.Cliente;
+import main.ListaEspera.ListaEspera;
 import main.Mesa.Mesa;
 
 public class Requisicao {
-    private ArrayList<Mesa> mesas;
+    ListaEspera listaEspera = new ListaEspera();
+    private LocalDateTime entrada;
+    private LocalDateTime saida;
 
     public void alocarCliente(String nomeCliente, int qtdClientes) {
         Mesa mesa = verificacaoMesa(qtdClientes);
         LocalDateTime entrada = LocalDateTime.now();
         if (mesa != null) {
             Cliente cliente = new Cliente(nomeCliente, qtdClientes);
-            mesa.alocarCliente(cliente);
+            // mesa.alocarCliente(cliente);
             System.out.println("Alocando mesa para " + qtdClientes + " clientes, entrada: " + entrada);
         } else {
             // Cliente cliente = new Cliente(qtdClientes);
@@ -25,21 +28,28 @@ public class Requisicao {
     }
 
     private Mesa verificacaoMesa(int qtdClientes) {
-        for (Mesa mesa : mesas) {
-            if (mesa.diponibilidade() && mesa.getCapacidade() >= qtdClientes) {
-                System.out.println("Mesa Disponivel " + mesa);
-                return mesa;
-            }
-        }
+        /*
+         * for (Mesa mesa : mesas) {
+         * if (mesa.diponibilidade() && mesa.getCapacidade() >= qtdClientes) {
+         * System.out.println("Mesa Disponivel " + mesa);
+         * return mesa;
+         * }
+         * }
+         */
         return null;
     }
 
+    public void removerCliente(Cliente clientes) {
+        saida = LocalDateTime.now();
+        System.out.println("Mesa vazia, horário de saída dos clientes: " + saida);
+    }
+
+    public Boolean alocarCliente(Cliente clientes) {
+        entrada = LocalDateTime.now();
+        System.out.println("Horário de entrada dos clientes: " + entrada);
+        return true;
+    }
     /*
-     * private void ClienteEspera(Cliente cliente) {
-     * listaEspera.add(cliente);
-     * System.out.println("Cliente alocado para a espera!");
-     * }
-     * 
      * public void removerCliente() {
      * for (Mesa mesa : mesas) {
      * if (!mesa.cliente.isEmpty()) {
