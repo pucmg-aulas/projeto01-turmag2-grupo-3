@@ -4,7 +4,6 @@ Nosso projeto tem o objetivo de criar um sistema que administra a entrada e saí
 ## Alunos integrantes da equipe
 
 * Davi Érico dos Santos
-* Débora Campos Sigaud
 * Lucas Alves Resende
 * Luiz Gustavo Silva Oliveira
 * Nathan Flores Brescia
