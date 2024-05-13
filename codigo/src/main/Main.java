@@ -3,9 +3,9 @@ package main;
 import java.util.Scanner;
 
 import main.Mesa.Mesa;
+import main.Cardapio.Cardapio;
 import main.Restaurante.*;
 import main.Requisicao.Requisicao;
-import main.Cardapio.Cardapio;
 import main.ListaEspera.ListaEspera;
 
 public class Main {
@@ -30,8 +30,7 @@ public class Main {
         int flag = 0;
 
         while (flag != 1) {
-            System.out.print(
-                    "Digite 1 para alocar cliente\nDigite 2 para remover cliente\nDigite 3 para conferir mesas\nDigite 4 para checar lista de espera\nDigite 5 para checar menu\nDigite 6 para sair");
+            System.out.print("Digite 1 para alocar cliente\nDigite 2 para remover cliente\nDigite 3 para conferir mesas\nDigite 4 para checar lista de espera\nDigite 5 para checar menu\nDigite 6 para sair\nEscolha: ");
             int choose = insert.nextInt();
             switch (choose) {
                 case 1:
@@ -46,10 +45,11 @@ public class Main {
                     }
                     break;
                 case 2:
+                     
                     // restaurante.removerCliente();
                     break;
                 case 3:
-                    // restaurante.removerCliente();
+                    restaurante.MostrarMesas();
                     break;
                 case 4:
                     listaEspera.MostrarLista();

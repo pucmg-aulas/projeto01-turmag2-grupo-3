@@ -10,15 +10,22 @@ public class Mesa {
         ocupada = false;
     }
 
-    public Boolean diponibilidade() {
-        return !ocupada;
-    }
-
     public void setOcupada(boolean ocupada) {
         this.ocupada = ocupada;
     }
 
     public int getCapacidade() {
         return capacidade;
+    }
+
+    public Boolean getOcupada(){
+        return ocupada;
+    }
+
+    public String getDisponibilidade() {
+        if (ocupada == false) {
+            return "Desocupada";
+        }
+        return "Ocupada";
     }
 }
