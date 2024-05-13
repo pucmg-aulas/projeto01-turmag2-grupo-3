@@ -12,7 +12,6 @@ public class Prato {
     public String getNome() {
         return Nome;
     }
-
     public double getPreco() {
         return Preco;
     }

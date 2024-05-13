@@ -14,12 +14,14 @@ public class Cardapio {
         MenuItensBebida = new ArrayList<>();
     }
 
-    public void AdicionarPrato(Prato prato) {
+    public void AdicionarPrato(String nome, double preco) {
+        Prato prato = new Prato(nome, preco);
         MenuItensPrato.add(prato);
         System.out.println("Prato Adicionado");
     }
-    
-    public void AdicionarBebida(Bebida bebida) {
+
+    public void AdicionarBebida(String nome, double preco) {
+        Bebida bebida = new Bebida(nome, preco);
         MenuItensBebida.add(bebida);
         System.out.println("Bebida Adicionado");
     }

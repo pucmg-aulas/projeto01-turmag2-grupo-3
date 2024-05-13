@@ -66,5 +66,3 @@ public class Main {
     }
 
 }
-
-// Alocar lista de espera aqui
