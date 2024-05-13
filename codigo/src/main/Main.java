@@ -36,11 +36,11 @@ public class Main {
                     }else if(qtdClientes>=9){
                         System.out.println("Quatidade não permitida!");
                     }else{
-                        restaurante.alocarCliente(qtdClientes);
+                        // restaurante.alocarCliente(qtdClientes);
                     }
                     break;
                 case 2:
-                    restaurante.removerCliente();
+                    // restaurante.removerCliente();
                     break;
                 case 3:
                 flag=1;
