@@ -23,8 +23,21 @@ public class ListaEspera {
 
     public void MostrarLista() {
         System.out.println("Lista de Clientes na fila de espera:");
+        if (ListaDeEspera == null) {
+            System.out.println("Lista vazia!");
+            return;
+        }
         for (Cliente cliente : ListaDeEspera) {
             System.out.println(cliente.getNome() + ", quantidade reservada de assentos: " + cliente.getQtdCliente());
         }
+
+    }
+
+    public ArrayList<Cliente> getListaDeEspera() {
+        return ListaDeEspera;
+    }
+
+    public void setListaDeEspera(ArrayList<Cliente> listaDeEspera) {
+        ListaDeEspera = listaDeEspera;
     }
 }

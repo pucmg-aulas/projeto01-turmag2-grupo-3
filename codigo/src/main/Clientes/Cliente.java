@@ -1,20 +1,76 @@
 package main.Clientes;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
+import main.Bebida.Bebida;
+import main.Mesa.Mesa;
+import main.Prato.Prato;
+
 public class Cliente {
+
     private int QtdClientes;
     private String Nome;
+    private ArrayList<Prato> pratos;
+    private ArrayList<Bebida> bebidas;
+    private LocalDateTime entrada;
+    private LocalDateTime saida;
+    private Mesa mesa;
 
-    public Cliente(String nome,int qtdClientes) {
+    public Cliente(String nome, int qtdClientes, Mesa mesa) {
         this.QtdClientes = qtdClientes;
         this.Nome = nome;
+        this.pratos = new ArrayList<>();
+        this.bebidas = new ArrayList<>();
+        this.mesa = mesa;
     }
 
     public int getQtdCliente() {
         return QtdClientes;
     }
-    
+
     public String getNome() {
         return Nome;
+    }
+
+    public LocalDateTime getEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(LocalDateTime entrada) {
+        this.entrada = entrada;
+    }
+
+    public LocalDateTime getSaida() {
+        return saida;
+    }
+
+    public void setSaida(LocalDateTime saida) {
+        this.saida = saida;
+    }
+
+    public Mesa getMesa() {
+        return mesa;
+    }
+
+    public void setMesa(Mesa mesa) {
+        this.mesa = mesa;
+    }
+
+    public void Conta() {
+        System.out.println("Conta de " + Nome + ":");
+        double total = 0;
+        System.out.println("Pratos:");
+        for (Prato prato : pratos) {
+            System.out.println(prato.getNome() + ": R$" + prato.getPreco());
+            total += prato.getPreco();
+        }
+        System.out.println("Bebidas:");
+        for (Bebida bebida : bebidas) {
+            System.out.println(bebida.getNome() + ": R$" + bebida.getPreco());
+            total += bebida.getPreco();
+        }
+        System.out.println("Total: R$" + total);
     }
 
 }

@@ -28,12 +28,16 @@ public class Cardapio {
 
     public void MostrarCardapio() {
         System.out.print("Cardapio:\nPratos:\n");
+        int index =1;
         for (Prato prato : MenuItensPrato) {
-            System.out.println(prato.getNome() + ": R$" + prato.getPreco());
+            System.out.println(index+". "+prato.getNome() + ": R$" + prato.getPreco());
+            index++;
         }
         System.out.println("Bebidas:");
+        index =1;
         for (Bebida bebida : MenuItensBebida) {
-            System.out.println(bebida.getNome() + ": R$" + bebida.getPreco());
+            System.out.println(index+". "+bebida.getNome() + ": R$" + bebida.getPreco());
+            index++;
         }
     }
 }
