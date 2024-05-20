@@ -68,15 +68,17 @@ public class Requisicao {
                 System.out.println("Lista de espera vazia!");
             } else {
                 for (Cliente cliente : listaEspera.getListaDeEspera()) {
-                    if (alocarCliente(cliente.getNome(), cliente.getQtdCliente(), mesa)) {
-                        mesa.setOcupada(true);
-                        comendo.add(cliente);
-                        System.out.println("Cliente da reserva de nome: " + cliente.getNome()
-                                + " da fila de espera foi alocado para uma mesa.");
-                        listaEspera.RemoverCliente(cliente);
-                        break;
-                    } else {
-                        System.out.println("Nenhum cliente da lista pode ser alocado no momento!");
+                    if (cliente.getQtdCliente() <= mesa.getCapacidade()) {
+                        if (alocarCliente(cliente.getNome(), cliente.getQtdCliente(), mesa)) {
+                            mesa.setOcupada(true);
+                            comendo.add(cliente);
+                            System.out.println("Cliente da reserva de nome: " + cliente.getNome()
+                                    + " da fila de espera foi alocado para uma mesa.");
+                            listaEspera.RemoverCliente(cliente);
+                            break;
+                        } else {
+                            System.out.println("Nenhum cliente da lista pode ser alocado no momento!");
+                        }
                     }
                 }
 

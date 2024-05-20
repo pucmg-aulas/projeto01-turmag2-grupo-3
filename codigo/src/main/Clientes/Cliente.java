@@ -72,7 +72,14 @@ public class Cliente {
         for (Bebida bebida : bebidas) {
             System.out.println(bebida.getNome() + ": R$" + bebida.getPreco());
         }
-        System.out.println("Total: R$" + total);
+        String totalformatado = String.format("%.2f", total);
+        System.out.println("Total: R$" + totalformatado);
+        String finalformatado = String.format("%.2f", finalizada());
+        System.out.println("Total com taxas e dividido: R$" + finalformatado);
+    }
+
+    private double finalizada() {
+        return (((total * 0.1)+total) / getQtdCliente());
     }
 
     public void comprarPrato(Prato prato) {
