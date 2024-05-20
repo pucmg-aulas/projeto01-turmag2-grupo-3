@@ -3,6 +3,8 @@ package main;
 import java.util.Scanner;
 
 import main.Mesa.Mesa;
+import main.Prato.Prato;
+import main.Bebida.Bebida;
 import main.Cardapio.Cardapio;
 import main.Clientes.Cliente;
 import main.Restaurante.*;
@@ -41,7 +43,7 @@ public class Main {
 
         while (flag != 1) {
             System.out.print(
-                    "Digite 1 para alocar cliente\nDigite 2 para remover cliente\nDigite 3 para conferir mesas\nDigite 4 para checar lista de espera\nDigite 5 para checar menu\nDigite 6 para lista de clientes\nDigite 7 para sair\nEscolha: ");
+                    "Digite 1 para alocar cliente\nDigite 2 para remover cliente\nDigite 3 para conferir mesas\nDigite 4 para checar lista de espera\nDigite 5 para checar menu\nDigite 6 para lista de clientes\nDigite 7 para comprar um prato\nDigite 8 para comprar bebida\nDigite 9 para mostrar conta\nDigite 10 para sair\nEscolha: ");
             int choose = insert.nextInt();
             insert.nextLine();
             System.out.println("");
@@ -90,6 +92,72 @@ public class Main {
                     requisicao.listaDeClientes();
                     break;
                 case 7:
+                    requisicao.listaDeClientes();
+                    System.out.println("Digite o numero do cliente que deseja");
+                    escolha = insert.nextInt();
+                    insert.nextLine();
+                    cardapio.MostrarCardapio();
+                    System.out.println("Digite o numero do prato que deseja");
+                    int comida = insert.nextInt();
+                    insert.nextLine();
+                    index = 0;
+                    int index2 = 0;
+                    for (Cliente cliente : requisicao.getComendo()) {
+                        if (index == escolha - 1) {
+                            for (Prato prato : cardapio.getMenuItensPrato()) {
+                                if (index2 == comida - 1) {
+                                    cliente.comprarPrato(prato);
+                                }
+                                index2++;
+                            }
+                            break;
+                        }
+                        index++;
+                    }
+                    break;
+                case 8:
+                    requisicao.listaDeClientes();
+                    System.out.println("Digite o numero do cliente que deseja");
+                    escolha = insert.nextInt();
+                    insert.nextLine();
+                    cardapio.MostrarCardapio();
+                    comida = insert.nextInt();
+                    insert.nextLine();
+                    System.out.println("Digite o numero da bebida que deseja");
+                    index = 0;
+                    index2 = 0;
+                    for (Cliente cliente : requisicao.getComendo()) {
+                        if (index == escolha - 1) {
+                            for (Bebida bebida : cardapio.getMenuItensBebida()) {
+                                if (index2 == comida - 1) {
+                                    cliente.comprarBebida(bebida);
+                                }
+                                index2++;
+                            }
+                            break;
+                        }
+                        index++;
+                    }
+                    break;
+                case 9:
+                    requisicao.listaDeClientes();
+                    System.out.println("Selecione um cliente digitando seu número: ");
+                    escolha = insert.nextInt();
+                    insert.nextLine();
+                    index = 0;
+                    if (escolha > 10) {
+                        System.out.println("Escolha invalida!");
+                        break;
+                    }
+                    for (Cliente cliente : requisicao.getComendo()) {
+                        if (index == escolha - 1) {
+                            cliente.Conta();
+                            break;
+                        }
+                        index++;
+                    }
+                    break;
+                case 10:
                     flag = 1;
                     break;
                 default:

@@ -40,4 +40,12 @@ public class Cardapio {
             index++;
         }
     }
+
+    public ArrayList<Prato> getMenuItensPrato() {
+        return MenuItensPrato;
+    }
+
+    public ArrayList<Bebida> getMenuItensBebida() {
+        return MenuItensBebida;
+    }
 }

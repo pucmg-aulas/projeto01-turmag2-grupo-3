@@ -56,29 +56,33 @@ public class Requisicao {
     }
 
     public void removerCliente(Cliente clientes) {
-        comendo.remove(clientes);
-        clientes.setSaida(LocalDateTime.now());
-        Mesa mesa = clientes.getMesa();
-        mesa.setOcupada(false);
-        clientes.setMesa(null);
-        System.out.print("Mesa vazia, horário de saída dos clientes: " + clientes.getSaida()
-                + "\nAlocando clientes da fila de espera!\n");
-        if (listaEspera.getListaDeEspera() == null) {
-            System.out.println("Lista de espera vazia!");
-        } else {
-            for (Cliente cliente : listaEspera.getListaDeEspera()) {
-                if (alocarCliente(cliente.getNome(), cliente.getQtdCliente(), mesa)) {
-                    mesa.setOcupada(true);
-                    comendo.add(cliente);
-                    System.out.println("Cliente da reserva de nome: " + cliente.getNome()
-                            + " da fila de espera foi alocado para uma mesa.");
-                    listaEspera.RemoverCliente(cliente);
-                    break;
-                } else {
-                    System.out.println("Nenhum cliente da lista pode ser alocado no momento!");
+        if (comendo.remove(clientes)) {
+            clientes.setSaida(LocalDateTime.now());
+            Mesa mesa = clientes.getMesa();
+            mesa.setOcupada(false);
+            clientes.Conta();
+            clientes.setMesa(null);
+            System.out.print("Mesa vazia, horário de saída dos clientes: " + clientes.getSaida()
+                    + "\nAlocando clientes da fila de espera!\n");
+            if (listaEspera.getListaDeEspera() == null) {
+                System.out.println("Lista de espera vazia!");
+            } else {
+                for (Cliente cliente : listaEspera.getListaDeEspera()) {
+                    if (alocarCliente(cliente.getNome(), cliente.getQtdCliente(), mesa)) {
+                        mesa.setOcupada(true);
+                        comendo.add(cliente);
+                        System.out.println("Cliente da reserva de nome: " + cliente.getNome()
+                                + " da fila de espera foi alocado para uma mesa.");
+                        listaEspera.RemoverCliente(cliente);
+                        break;
+                    } else {
+                        System.out.println("Nenhum cliente da lista pode ser alocado no momento!");
+                    }
                 }
-            }
 
+            }
+        } else {
+            System.out.println("Falha ao remover");
         }
     }
 

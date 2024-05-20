@@ -15,6 +15,7 @@ public class Cliente {
     private ArrayList<Bebida> bebidas;
     private LocalDateTime entrada;
     private LocalDateTime saida;
+    private double total = 0;
     private Mesa mesa;
 
     public Cliente(String nome, int qtdClientes, Mesa mesa) {
@@ -57,20 +58,31 @@ public class Cliente {
         this.mesa = mesa;
     }
 
+    public double getTotal() {
+        return total;
+    }
+
     public void Conta() {
         System.out.println("Conta de " + Nome + ":");
-        double total = 0;
         System.out.println("Pratos:");
         for (Prato prato : pratos) {
             System.out.println(prato.getNome() + ": R$" + prato.getPreco());
-            total += prato.getPreco();
         }
         System.out.println("Bebidas:");
         for (Bebida bebida : bebidas) {
             System.out.println(bebida.getNome() + ": R$" + bebida.getPreco());
-            total += bebida.getPreco();
         }
         System.out.println("Total: R$" + total);
+    }
+
+    public void comprarPrato(Prato prato) {
+        pratos.add(prato);
+        total += prato.getPreco();
+    }
+
+    public void comprarBebida(Bebida bebida) {
+        bebidas.add(bebida);
+        total += bebida.getPreco();
     }
 
 }
