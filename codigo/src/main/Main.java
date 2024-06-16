@@ -1,19 +1,13 @@
 package main;
 
-import java.util.Scanner;
-
 import main.Mesa.Mesa;
-import main.Prato.Prato;
-import main.Bebida.Bebida;
 import main.Cardapio.Cardapio;
-import main.Clientes.Cliente;
+import main.IntGrafica.LoginPage.Login;
 import main.Restaurante.*;
-import main.Requisicao.Requisicao;
 
 public class Main {
 
     public static void main(String[] args) {
-        Requisicao requisicao = new Requisicao();
         Cardapio cardapio = new Cardapio();
         Restaurante restaurante = new Restaurante();
         restaurante.adicionarMesa(new Mesa(4));
@@ -38,7 +32,9 @@ public class Main {
         cardapio.AdicionarBebida("Cerveja", 6.00);
         cardapio.AdicionarBebida("Taça de vinho", 18.00);
 
-        Scanner insert = new Scanner(System.in);
+        new Login();
+
+       /*  Scanner insert = new Scanner(System.in);
         int flag = 0;
 
         while (flag != 1) {
@@ -166,6 +162,8 @@ public class Main {
             }
         }
         insert.close();
+        */
     }
+        
 
 }
