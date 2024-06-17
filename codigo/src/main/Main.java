@@ -1,9 +1,9 @@
 package main;
 
-import main.Mesa.Mesa;
-import main.Cardapio.Cardapio;
+import main.Model.Cardapio.Cardapio;
+import main.Model.Mesa.Mesa;
+import main.Model.Restaurante.*;
 import main.Controller.Login.ControllerLogin;
-import main.Restaurante.*;
 import main.View.LoginPage.Login;
 
 public class Main {

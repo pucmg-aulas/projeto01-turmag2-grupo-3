@@ -1,11 +1,11 @@
-package main.Clientes;
+package main.Model.Clientes;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import main.Bebida.Bebida;
-import main.Mesa.Mesa;
-import main.Prato.Prato;
+import main.Model.Bebida.Bebida;
+import main.Model.Mesa.Mesa;
+import main.Model.Prato.Prato;
 
 public class Cliente {
 

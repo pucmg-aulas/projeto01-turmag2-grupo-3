@@ -1,9 +1,9 @@
-package main.Cardapio;
+package main.Model.Cardapio;
 
 import java.util.ArrayList;
 
-import main.Prato.Prato;
-import main.Bebida.Bebida;
+import main.Model.Bebida.Bebida;
+import main.Model.Prato.Prato;
 
 public class Cardapio {
     private ArrayList<Prato> MenuItensPrato;

@@ -1,8 +1,8 @@
-package main.Restaurante;
+package main.Model.Restaurante;
 
 import java.util.ArrayList;
 
-import main.Mesa.*;
+import main.Model.Mesa.*;
 
 public class Restaurante {
 

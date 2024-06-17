@@ -1,4 +1,4 @@
-package main.Bebida;
+package main.Model.Bebida;
 
 public class Bebida {
     private String nome;

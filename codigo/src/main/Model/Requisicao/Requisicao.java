@@ -1,11 +1,11 @@
-package main.Requisicao;
+package main.Model.Requisicao;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import main.Clientes.Cliente;
-import main.ListaEspera.ListaEspera;
-import main.Mesa.Mesa;
+import main.Model.Clientes.Cliente;
+import main.Model.ListaEspera.ListaEspera;
+import main.Model.Mesa.Mesa;
 
 public class Requisicao {
     ListaEspera listaEspera = new ListaEspera();
