@@ -12,8 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.text.AbstractDocument;
 
-
-import main.IntGrafica.CadastrarClientePage.CadastrarCliente;
+import main.View.CadastrarClientePage.CadastrarCliente;
 
 
 public class Recepcao extends JFrame implements ActionListener {

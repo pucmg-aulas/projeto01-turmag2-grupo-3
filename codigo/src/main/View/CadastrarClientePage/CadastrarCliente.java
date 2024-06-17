@@ -1,4 +1,4 @@
-package main.IntGrafica.CadastrarClientePage;
+package main.View.CadastrarClientePage;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;

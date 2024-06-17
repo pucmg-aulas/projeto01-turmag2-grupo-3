@@ -30,4 +30,8 @@ public class ControllerLogin {
             }
         });
     }
+
+    public ControllerLogin(main.IntGrafica.LoginPage.Login login2) {
+        //TODO Auto-generated constructor stub
+    }
 }
