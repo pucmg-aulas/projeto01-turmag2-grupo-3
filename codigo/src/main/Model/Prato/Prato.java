@@ -1,4 +1,4 @@
-package main.Prato;
+package main.Model.Prato;
 
 public class Prato {
     private String Nome;

@@ -1,11 +1,10 @@
 package main;
 
-import main.Mesa.Mesa;
-import main.Cardapio.Cardapio;
-import main.IntGrafica.CadastrarClientePage.CadastrarCliente;
-import main.IntGrafica.LoginPage.Login;
-import main.IntGrafica.RecepcaoPage.Recepcao;
-import main.Restaurante.*;
+import main.Model.Cardapio.Cardapio;
+import main.Model.Mesa.Mesa;
+import main.Model.Restaurante.*;
+import main.Controller.Login.ControllerLogin;
+import main.View.LoginPage.Login;
 
 public class Main {
 
@@ -34,11 +33,9 @@ public class Main {
         cardapio.AdicionarBebida("Cerveja", 6.00);
         cardapio.AdicionarBebida("Taça de vinho", 18.00);
 
-        //new Login();
-
-        //new Recepcao();
-
-        new CadastrarCliente();
+        Login login = new Login();
+        ControllerLogin loginController = new ControllerLogin(login);
+        login.setVisible(true);
 
        /*  Scanner insert = new Scanner(System.in);
         int flag = 0;

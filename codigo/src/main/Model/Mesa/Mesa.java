@@ -1,4 +1,4 @@
-package main.Mesa;
+package main.Model.Mesa;
 
 public class Mesa {
 

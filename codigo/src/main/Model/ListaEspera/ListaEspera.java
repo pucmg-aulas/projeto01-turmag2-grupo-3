@@ -1,8 +1,8 @@
-package main.ListaEspera;
+package main.Model.ListaEspera;
 
 import java.util.ArrayList;
 
-import main.Clientes.Cliente;
+import main.Model.Clientes.Cliente;
 
 public class ListaEspera {
     private ArrayList<Cliente> ListaDeEspera;

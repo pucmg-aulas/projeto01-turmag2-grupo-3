@@ -5,9 +5,9 @@ Nosso projeto tem o objetivo de criar um sistema que administra a entrada e saí
 
 * Davi Érico dos Santos
 * Lucas Alves Resende
+* Lucas Maia Rocha
 * Luiz Gustavo Silva Oliveira
 * Nathan Flores Brescia
-* Lucas Maia Rocha
 
 ## Professor responsável 
 
