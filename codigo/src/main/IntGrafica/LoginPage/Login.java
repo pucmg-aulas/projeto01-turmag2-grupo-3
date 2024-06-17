@@ -1,6 +1,9 @@
 package main.IntGrafica.LoginPage;
 
 import javax.swing.*;
+
+import main.IntGrafica.RecepcaoPage.Recepcao;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -82,6 +85,9 @@ public class Login extends JFrame implements ActionListener {
 
             if (userText.equalsIgnoreCase("admin") && pwdText.equalsIgnoreCase("admin")) {
                 JOptionPane.showMessageDialog(this, "Login Successful");
+                Recepcao r = new Recepcao();
+                this.dispose();
+                r.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "Invalido Usuario ou Senha");
             }

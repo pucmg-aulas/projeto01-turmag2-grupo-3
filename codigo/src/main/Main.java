@@ -2,7 +2,9 @@ package main;
 
 import main.Mesa.Mesa;
 import main.Cardapio.Cardapio;
+import main.IntGrafica.CadastrarClientePage.CadastrarCliente;
 import main.IntGrafica.LoginPage.Login;
+import main.IntGrafica.RecepcaoPage.Recepcao;
 import main.Restaurante.*;
 
 public class Main {
@@ -32,7 +34,11 @@ public class Main {
         cardapio.AdicionarBebida("Cerveja", 6.00);
         cardapio.AdicionarBebida("Taça de vinho", 18.00);
 
-        new Login();
+        //new Login();
+
+        //new Recepcao();
+
+        new CadastrarCliente();
 
        /*  Scanner insert = new Scanner(System.in);
         int flag = 0;
