@@ -5,11 +5,13 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
+import main.Controller.Recepcao.ControllerRecepcao;
 import main.View.LoginPage.Login;
 import main.View.Recepcao.Recepcao;
 
 public class ControllerLogin {
     private Login login;
+    private Recepcao recepcao;
 
     public ControllerLogin(Login login) {
         this.login = login;
@@ -21,7 +23,7 @@ public class ControllerLogin {
 
                 if ("admin".equals(user) && "admin".equals(pass)) {
                     Recepcao recepcao = new Recepcao();
-                   // RecepcaoController recepcaoController = new RecepcaoController(recepcaoView);
+                    ControllerRecepcao recepcaoController = new ControllerRecepcao(recepcao);
                     login.setVisible(false);
                     recepcao.setVisible(true);
                 } else {
