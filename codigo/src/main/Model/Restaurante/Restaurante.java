@@ -17,6 +17,10 @@ public class Restaurante {
         System.out.println("Adicionando mesa");
     }
 
+    public ArrayList<Mesa> getMesas() {
+        return mesas;
+    }
+
     public void MostrarMesas() {
         System.out.println("Lista de mesas:");
         for (Mesa mesa : mesas) {

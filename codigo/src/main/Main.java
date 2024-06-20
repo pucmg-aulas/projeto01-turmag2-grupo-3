@@ -3,7 +3,9 @@ package main;
 import main.Model.Cardapio.Cardapio;
 import main.Model.Mesa.Mesa;
 import main.Model.Restaurante.*;
+import main.Controller.CadastrarCliente.ControllerCadastrarCliente;
 import main.Controller.Login.ControllerLogin;
+import main.View.CadastrarClientePage.CadastrarCliente;
 import main.View.LoginPage.Login;
 
 public class Main {
@@ -33,9 +35,13 @@ public class Main {
         cardapio.AdicionarBebida("Cerveja", 6.00);
         cardapio.AdicionarBebida("Taça de vinho", 18.00);
 
-        Login login = new Login();
+        /*Login login = new Login();
         ControllerLogin loginController = new ControllerLogin(login);
-        login.setVisible(true);
+        login.setVisible(true);*/
+
+        CadastrarCliente cadastrarCliente = new CadastrarCliente();
+        ControllerCadastrarCliente cadastrarClienteController = new ControllerCadastrarCliente(cadastrarCliente, restaurante);
+        
 
        /*  Scanner insert = new Scanner(System.in);
         int flag = 0;

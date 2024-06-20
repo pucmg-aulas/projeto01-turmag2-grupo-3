@@ -45,21 +45,6 @@ public class Recepcao extends JFrame {
         return mesasDisponiveisButton;
     }
     
-    //registerClienteButton.addActionListener(this);
-    //mesasDisponiveisButton.addActionListener(this::teste);
 
-    /*public void teste(ActionEvent actionEvent) {
-        JOptionPane.showMessageDialog(null, "Mesas Disponivel", "Cadastrar Cliente", JOptionPane.WARNING_MESSAGE);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        CadastrarCliente c = new CadastrarCliente();
-        this.dispose();
-        c.setVisible(true);
-        // JOptionPane.showMessageDialog(null,"erro","Cadastrar
-        // Cliente",JOptionPane.ERROR_MESSAGE);
-
-    }*/
 
 }

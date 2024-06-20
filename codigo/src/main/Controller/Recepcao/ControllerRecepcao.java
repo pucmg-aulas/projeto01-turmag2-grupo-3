@@ -42,9 +42,7 @@ public class ControllerRecepcao extends JFrame implements ActionListener {
         });
     }
 
-    public void teste(ActionEvent actionEvent) {
-        JOptionPane.showMessageDialog(null, "Mesas Disponivel", "Cadastrar Cliente", JOptionPane.WARNING_MESSAGE);
-    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
