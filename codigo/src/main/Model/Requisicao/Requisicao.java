@@ -16,6 +16,7 @@ public class Requisicao {
     }
 
     public boolean alocarCliente(String nomeCliente, int qtdClientes, Mesa mesa) {
+        if(qtdClientes < 9){
         if (mesa != null) {
             Cliente cliente = new Cliente(nomeCliente, qtdClientes, mesa);
             cliente.setEntrada(LocalDateTime.now());
@@ -30,6 +31,9 @@ public class Requisicao {
             System.out.println("Não exitem mesas disponiveis no momento para essa quantidade de pessoas!");
             return false;
         }
+    }
+    System.out.println("Quantidade não Permitida");
+    return false;
 
     }
 

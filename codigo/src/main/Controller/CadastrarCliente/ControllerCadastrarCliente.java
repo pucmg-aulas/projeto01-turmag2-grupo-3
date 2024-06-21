@@ -40,7 +40,7 @@ public class ControllerCadastrarCliente extends JFrame implements ActionListener
 
                     JOptionPane.showMessageDialog(null, "Cliente Cadastrado", "Cadastrar Cliente", JOptionPane.WARNING_MESSAGE);
                     
-                }else {
+                }else if(resposta == false && quantidade < 9){
 
                     JOptionPane.showMessageDialog(null, "Cliente adicionado a Lista de Espera", "Lista de Espera", JOptionPane.WARNING_MESSAGE);
                 }
