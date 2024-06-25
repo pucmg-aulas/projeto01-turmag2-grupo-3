@@ -16,6 +16,7 @@ public class CadastrarCliente extends JFrame  {
     private JLabel nomeClienteLabel;
     private JLabel qtdClienteLabel;
     private JButton cadastrarClienteButton;
+    private JButton retornarRecepcao;
 
     public CadastrarCliente(){
         
@@ -74,6 +75,11 @@ public class CadastrarCliente extends JFrame  {
         cadastrarClienteButton.setFont(new Font("Arial", Font.PLAIN, 15));
         add(cadastrarClienteButton);
 
+        retornarRecepcao = new JButton("RetornarRecepcao");
+        retornarRecepcao.setBounds(250, 235, 250, 50);
+        retornarRecepcao.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(retornarRecepcao);
+
 
 
         setLocationRelativeTo(null);
@@ -92,6 +98,10 @@ public class CadastrarCliente extends JFrame  {
         return nomeClienteTextField;
     }
 
+    public JButton getRetornarRecepcao() {
+        return retornarRecepcao;
+    }
     
 
+    
 }

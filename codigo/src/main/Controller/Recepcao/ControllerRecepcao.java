@@ -53,7 +53,7 @@ public class ControllerRecepcao extends JFrame implements ActionListener {
 
 
         CadastrarCliente cadastrarCliente = new CadastrarCliente();
-        ControllerCadastrarCliente cadastrarClienteController = new ControllerCadastrarCliente(cadastrarCliente, this.restaurante);
+        ControllerCadastrarCliente cadastrarClienteController = new ControllerCadastrarCliente(cadastrarCliente, this.restaurante, this.recepcao);
         cadastrarCliente.setVisible(false);
 
         this.recepcao.getRegisterClienteButton().addActionListener(new ActionListener() {
@@ -61,14 +61,9 @@ public class ControllerRecepcao extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 
-                //restaurante = new Restaurante();
-                /*CadastrarCliente cadastrarCliente = new CadastrarCliente();
-                ControllerCadastrarCliente cadastrarClienteController = new ControllerCadastrarCliente(cadastrarCliente, restaurante);*/
                 recepcao.setVisible(false);
                 cadastrarCliente.setVisible(true);
-                // JOptionPane.showMessageDialog(null,"erro","Cadastrar
-                // Cliente",JOptionPane.ERROR_MESSAGE);
-        
+
             }
 
        

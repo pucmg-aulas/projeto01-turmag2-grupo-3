@@ -11,6 +11,7 @@ import main.Model.Mesa.Mesa;
 import main.Model.Requisicao.Requisicao;
 import main.Model.Restaurante.Restaurante;
 import main.View.CadastrarClientePage.CadastrarCliente;
+import main.View.Recepcao.Recepcao;
 
 public class ControllerCadastrarCliente extends JFrame implements ActionListener {
     
@@ -18,11 +19,14 @@ public class ControllerCadastrarCliente extends JFrame implements ActionListener
     private Requisicao requisicao;
     private boolean resposta;
     private Restaurante restaurante;
+    private Recepcao recepcao;
+    
     
 
-    public ControllerCadastrarCliente(CadastrarCliente cadastrarCliente, Restaurante restaurante){
+    public ControllerCadastrarCliente(CadastrarCliente cadastrarCliente, Restaurante restaurante, Recepcao recepcao){
         this.cadastrarCliente = cadastrarCliente;
         this.restaurante = restaurante;
+        this.recepcao = recepcao;
         this.cadastrarCliente.getCadastrarClienteButton().addActionListener(new ActionListener() {
 
             @Override
@@ -47,6 +51,20 @@ public class ControllerCadastrarCliente extends JFrame implements ActionListener
             }
             
         });
+
+        this.cadastrarCliente.getRetornarRecepcao().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+
+                cadastrarCliente.setVisible(false);
+                recepcao.setVisible(true);
+
+            }
+            
+        });
+
     }
 
     @Override
