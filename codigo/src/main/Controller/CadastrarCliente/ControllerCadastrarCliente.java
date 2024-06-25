@@ -16,7 +16,6 @@ public class ControllerCadastrarCliente extends JFrame implements ActionListener
     
     private CadastrarCliente cadastrarCliente;
     private Requisicao requisicao;
-    private ArrayList<Mesa> mesa;
     private boolean resposta;
     private Restaurante restaurante;
     
@@ -28,7 +27,7 @@ public class ControllerCadastrarCliente extends JFrame implements ActionListener
 
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                //restaurante = new Restaurante();
+                //Restaurante restaurante = new Restaurante();
                 requisicao = new Requisicao();
                 //mesa = new ArrayList<>();
                 String nome = cadastrarCliente.getNomeClienteTextField().getText();

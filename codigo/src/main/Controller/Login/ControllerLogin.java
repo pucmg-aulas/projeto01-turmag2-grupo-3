@@ -6,15 +6,18 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 import main.Controller.Recepcao.ControllerRecepcao;
+import main.Model.Restaurante.Restaurante;
 import main.View.LoginPage.Login;
 import main.View.Recepcao.Recepcao;
 
 public class ControllerLogin {
     private Login login;
     private Recepcao recepcao;
+    private Restaurante restaurante;
 
     public ControllerLogin(Login login) {
         this.login = login;
+        this.restaurante = restaurante;
         this.login.getLoginButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -23,7 +26,7 @@ public class ControllerLogin {
 
                 if ("admin".equals(user) && "admin".equals(pass)) {
                     Recepcao recepcao = new Recepcao();
-                    ControllerRecepcao recepcaoController = new ControllerRecepcao(recepcao);
+                    ControllerRecepcao recepcaoController = new ControllerRecepcao(recepcao, restaurante);
                     login.setVisible(false);
                     recepcao.setVisible(true);
                 } else {

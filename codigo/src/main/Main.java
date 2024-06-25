@@ -11,7 +11,7 @@ import main.View.LoginPage.Login;
 public class Main {
 
     public static void main(String[] args) {
-        Cardapio cardapio = new Cardapio();
+        /*Cardapio cardapio = new Cardapio();
         Restaurante restaurante = new Restaurante();
         restaurante.adicionarMesa(new Mesa(4));
         restaurante.adicionarMesa(new Mesa(4));
@@ -33,14 +33,14 @@ public class Main {
         cardapio.AdicionarBebida("Suco", 8.00);
         cardapio.AdicionarBebida("Refrigerante", 8.00);
         cardapio.AdicionarBebida("Cerveja", 6.00);
-        cardapio.AdicionarBebida("Taça de vinho", 18.00);
+        cardapio.AdicionarBebida("Taça de vinho", 18.00);*/
 
-        /*Login login = new Login();
+        Login login = new Login();
         ControllerLogin loginController = new ControllerLogin(login);
-        login.setVisible(true);*/
+        login.setVisible(true);
 
-        CadastrarCliente cadastrarCliente = new CadastrarCliente();
-        ControllerCadastrarCliente cadastrarClienteController = new ControllerCadastrarCliente(cadastrarCliente, restaurante);
+        /*CadastrarCliente cadastrarCliente = new CadastrarCliente();
+        ControllerCadastrarCliente cadastrarClienteController = new ControllerCadastrarCliente(cadastrarCliente, restaurante);*/
         
 
        /*  Scanner insert = new Scanner(System.in);
