@@ -11,7 +11,7 @@ public class AddClientView extends JFrame {
 
     public AddClientView() {
         setTitle("Adicionar Cliente");
-        setSize(400, 200);
+        setSize(4000, 2000);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 

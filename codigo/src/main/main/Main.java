@@ -1,4 +1,4 @@
-package dev_restaurante;
+package main;
 
 import dev_restaurante.controller.ReceptionController;
 import dev_restaurante.model.Restaurante;

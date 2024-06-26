@@ -11,12 +11,12 @@ public class ReceptionView extends JFrame {
     private JButton botaoDelivery; 
 
     public ReceptionView() {
-        setTitle("Recepção - Dev Restaurante");
+        setTitle("Recepção - Java Cooking");
         setSize(1200, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        JLabel mensagemBoasVindas = new JLabel("Seja bem-vindo ao Dev Restaurante", JLabel.CENTER);
+        JLabel mensagemBoasVindas = new JLabel("Seja bem-vindo ao Java Cooking", JLabel.CENTER);
         mensagemBoasVindas.setFont(new Font("Arial", Font.BOLD, 24));
 
         botaoAdicionarCliente = new JButton("Adicionar Cliente");
