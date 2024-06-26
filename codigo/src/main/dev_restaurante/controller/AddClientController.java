@@ -56,8 +56,10 @@ public class AddClientController {
         try {
             if (restaurante.adicionarCliente(cliente)) {
                 JOptionPane.showMessageDialog(addClientView, "Cliente adicionado com sucesso!");
-            } else {
+            } else if(quantidadePessoas <= 8){
                 JOptionPane.showMessageDialog(addClientView, "Todas as mesas estão ocupadas. Cliente adicionado à fila de espera.");
+            }else{
+                JOptionPane.showMessageDialog(addClientView, "Erro ao adicionar cliente ao restaurante. Favor inserir número de pessoas valido");
             }
         } catch (Exception ex) {
             mostrarMensagemErro("Erro ao adicionar cliente ao restaurante: " + ex.getMessage());
