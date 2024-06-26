@@ -35,12 +35,12 @@ public class Main {
         cardapio.AdicionarBebida("Cerveja", 6.00);
         cardapio.AdicionarBebida("Taça de vinho", 18.00);*/
 
-        /*Login login = new Login();
+        Login login = new Login();
         ControllerLogin loginController = new ControllerLogin(login);
-        login.setVisible(true);*/
+        login.setVisible(true);
 
-        CadastrarCliente cadastrarCliente = new CadastrarCliente();
-        ControllerCadastrarCliente cadastrarClienteController = new ControllerCadastrarCliente(cadastrarCliente, restaurante);
+        /*CadastrarCliente cadastrarCliente = new CadastrarCliente();
+        ControllerCadastrarCliente cadastrarClienteController = new ControllerCadastrarCliente(cadastrarCliente, restaurante);*/
         
 
        /*  Scanner insert = new Scanner(System.in);
